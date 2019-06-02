@@ -8,8 +8,7 @@ Created on Wed May 29 08:22:57 2019
 import pandas as pd
 import re
 
-data = pd.read_csv('/home/adithya/AI_ML/RNN_LSTM_COURSERA/indian_names\
-/Indian-Male-Names.csv', header = 0)
+data = pd.read_csv('../data/Indian-Male-Names.csv', header = 0)
 data=data[['name']].values.tolist()
 
 clean_data = []
@@ -33,8 +32,7 @@ for datas in data:
         clean_data.append(st[:20] if len(st) > 20 else st)
     
 
-data = pd.read_csv('/home/adithya/AI_ML/RNN_LSTM_COURSERA/indian_names\
-/Indian-Female-Names.csv', header = 0)
+data = pd.read_csv('../data/Indian-Female-Names.csv', header = 0)
 data=data[['name']].values.tolist()
 
 for datas in data:
