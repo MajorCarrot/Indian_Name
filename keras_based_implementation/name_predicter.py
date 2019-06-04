@@ -36,7 +36,7 @@ def predicter(s, char2idx, idx2char, vocablen, model_path):
 
 names = []
 
-with open("/home/adithya/AI_ML/RNN_LSTM_COURSERA/indian_names/Name.txt") as f:
+with open("../data/Name.txt") as f:
     names = f.readlines()
     f.close()
 names = [x.lower().strip() + '\n' for x in names]
@@ -49,6 +49,5 @@ char2idx = vocab
 idx2char = np.array(list(vocab))
 
 # name_train.trainer(names, list(vocab), char2idx, buff_length)
-predicter('ra', char2idx, idx2char, len(vocab), '/home/adithya/AI_ML/RNN_LSTM_COURSERA/indian_names/name_model_20000.h5')
-
+predicter('ra', char2idx, idx2char, len(vocab), '../model/name_model_20000.h5')
 
