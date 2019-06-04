@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 28 20:00:09 2019
+
+@author: adithya
+"""
+
 import numpy as np
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM, Dropout, SimpleRNN
@@ -70,3 +78,4 @@ def trainer(X, vocab, char2idx, buff_length, no_epochs=200):
 
     model.fit(x=X_train_oh, y=Y_train_oh, epochs=no_epochs)
     model.save('../model/'+input("Enter the name for .h5 file") + '.h5')
+
